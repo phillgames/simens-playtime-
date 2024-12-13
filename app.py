@@ -18,7 +18,7 @@ def main():
 
 
 @app.route('/')
-def form():
+def root():
     return render_template('form.html')
 
 @app.route("/register", methods=["POST"])
