@@ -20,7 +20,7 @@ def root():
 def root():
     return render_template('form.html')
 
-@app.route("/register", methods=[POST])
+@app.route("/register", methods=["POST"])
 def register():
     username = request.form["username"]
     password = request.form["password"]
@@ -39,7 +39,7 @@ def register():
     except Exception as e:
         return f"An error occurred: {e}"
 
-@app.route("/update_score", methods=[POST])
+@app.route("/update_score", methods=["POST"])
 def update_score():
     username = request.form["username"]
     new_score = request.form["score"]
