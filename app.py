@@ -17,7 +17,7 @@ def root():
     return render_template('main.html')
 
 
-@app.route('/')
+@app.route('/form')
 def root():
     return render_template('form.html')
 
