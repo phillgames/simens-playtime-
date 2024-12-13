@@ -29,7 +29,7 @@ def register():
     hashed_password = generate_password_hash(password)
 
     try:
-        conn = MySQLdb.connect(**db_config)
+        conn = pymysql.connect(**db_config)
         cursor = conn.cursor()
         query = "INSERT INTO users (user, pass, score) VALUES (%s, %s, %s)"
         cursor.execute(query, (username, hashed_password, score))
@@ -46,7 +46,7 @@ def update_score():
     new_score = request.form["score"]
 
     try:
-        conn = MySQLdb.connect(**db_config)
+        conn = pymysql.connect(**db_config)
         cursor = conn.cursor()
         query = "UPDATE users Set score = %s WHERE user =%s"
         cursor.execute(query, (new_score, username))
