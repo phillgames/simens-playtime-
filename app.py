@@ -12,13 +12,17 @@ db_config = {
     'database': 'godoths'
 }
 
-@app.route('/')
+@app.route('/main')
 def main():
     return render_template('main.html')
 
 @app.route('/form')
 def form():
     return render_template('form.html')
+
+@app.route('/submit')
+def submit():
+    return render_template('submit.html')
 
 @app.route("/register", methods=["POST"])
 def register():
