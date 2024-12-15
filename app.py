@@ -16,7 +16,7 @@ db_config = {
 def main():
     return render_template('main.html')
 
-@app.route('/')
+@app.route('/form')
 def form():
     return render_template('form.html')
 
