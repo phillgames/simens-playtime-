@@ -35,7 +35,7 @@ def register():
         conn.commit()
         cursor.close()
         conn.close()
-        return "redirect(url_for('success'))"
+        return "redirect(url_for('form'))"
     except Exception as e:
         return f"An error occurred: {e}"
 
