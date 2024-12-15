@@ -16,9 +16,8 @@ db_config = {
 def main():
     return render_template('main.html')
 
-
 @app.route('/')
-def root():
+def form():
     return render_template('form.html')
 
 @app.route("/register", methods=["POST"])
