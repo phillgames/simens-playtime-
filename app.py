@@ -30,6 +30,7 @@ def submit():
     password = request.form["password"]
     score = request.form["score"]
     hashed_password = generate_password_hash(password)
+    print(hashed_password)
 
     try:
         conn = pymysql.connect(**db_config)
