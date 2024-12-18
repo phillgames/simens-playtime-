@@ -40,7 +40,7 @@ def submit():
         conn.commit()
         cursor.close()
         conn.close()
-        return render_template('submit.html')
+        return render_template('main.html')
     except Exception as e:
         return f"An error occurred: {e}"
 
