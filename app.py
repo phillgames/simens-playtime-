@@ -39,7 +39,7 @@ def submit():
         conn.commit()
         cursor.close()
         conn.close()
-        return "redirect(url_for('form'))"
+        return render_template('submit.html')
     except Exception as e:
         return f"An error occurred: {e}"
 
