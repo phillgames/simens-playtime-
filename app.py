@@ -57,7 +57,7 @@ def update_score():
         conn.commit()
         cursor.close()
         conn.close()
-        return "Score updated successfully"
+        return render_template('main.html')
     except Exception as e:
         return f"An error occurred: {e}"
 
