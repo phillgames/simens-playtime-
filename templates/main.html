@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
-    <link rel="stylesheet" href="../css/style.css">
-    
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
 <body>
     <form method="get" action="../static/sigma-simensten.zip">
         <button type="submit">Download</button>
     </form>
-    <a href="form.html">
-        <button>Subit score</button>
+    <a href="{{ url_for('form') }}">
+        <button>Submit score</button>
     </a>
 
 </body>

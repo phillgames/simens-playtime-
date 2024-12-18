@@ -12,14 +12,17 @@ db_config = {
     'database': 'godoths'
 }
 
-@app.route('/')
+@app.route('/main')
 def main():
     return render_template('main.html')
 
-
-@app.route('/')
-def root():
+@app.route('/form')
+def form():
     return render_template('form.html')
+
+@app.route('/submit')
+def submit():
+    return render_template('submit.html')
 
 @app.route("/register", methods=["POST"])
 def register():
@@ -36,7 +39,7 @@ def register():
         conn.commit()
         cursor.close()
         conn.close()
-        return "User registered successfully with score!"
+        return "redirect(url_for('form'))"
     except Exception as e:
         return f"An error occurred: {e}"
 
