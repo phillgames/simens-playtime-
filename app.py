@@ -20,12 +20,12 @@ def main():
 def form():
     return render_template('form.html')
 
-@app.route('/submit')
-def submit():
-    return render_template('submit.html')
+# @app.route('/submit')
+# def submit():
+#     return render_template('submit.html')
 
-@app.route("/register", methods=["POST"])
-def register():
+@app.route("/submit", methods=["POST"])
+def submit():
     username = request.form["username"]
     password = request.form["password"]
     score = request.form["score"]
